@@ -48,12 +48,12 @@ console.log(flPik.selectedDates[0].getTime());
     btnStartTimer.addEventListener('click', dataTimer)    
 function dataTimer () {
   btnStartTimer.disabled = true; 
-  tumerId = setInterval( () => {              
+  const timerId = setInterval( () => {              
  let currentTime = Date.now();                   
 let diff = flPik.selectedDates[0] - currentTime;   
 if (diff < 0) {                   
   console.log('Конец АКЦИИ!!!')     
-  clearInterval(tumerId);            /// та пепериваємо setInterval
+  clearInterval(timerId);            /// та пепериваємо setInterval
   return;                       
 };
 
